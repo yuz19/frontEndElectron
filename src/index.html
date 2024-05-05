@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire XML</title>
+</head>
+<body>
+    <h1>Formulaire XML</h1>
+    <h1>Role</h1>
+    <input type="text" id="st_roles" name="st_task_role" ><br>
+    <input type="button" id="submitRole" value="Add Role" >
+
+    <!-- Balise Task - Single Task (ST) -->
+    <h2>Balise Task - Single Task (ST)</h2>
+    <form id="xmlForm">
+        <label>Nom de la tâche:</label><br>
+        <input type="text" id="st_task_name" name="st_task_name" value="Default Task Name"><br>
+
+        <label>Type de tâche:</label><br>
+        <input type="text" id="st_task_type" name="st_task_type" value="Default Task Type"><br>
+
+        <!-- Paramètres de tâche -->
+        <h3>Paramètres de tâche:</h3>
+        <label>Direction (in/out/inout):</label><br>
+        <input type="text" id="st_task_direction" name="st_task_direction" value="Default Direction"><br>
+
+        <label>Tâche liée:</label><br>
+        <input type="text" id="st_linked_task" name="st_linked_task" value="Default Linked Task"><br>
+
+        <label>Produit lié:</label><br>
+        <input type="text" id="st_linked_product" name="st_linked_product" value="Default Linked Product"><br>
+
+        <!-- Exécutant de tâche -->
+        <h3>Exécutant de tâche:</h3>
+        <label>Rôle:</label><br>
+        <input type="text" id="st_role" name="st_role" value="Default Role"><br>
+
+        <label>Tâche liée:</label><br>
+        <input type="text" id="st_linked_task_performer" name="st_linked_task_performer" value="Default Linked Task Performer"><br>
+
+        <!-- Lien vers successeur -->
+        <h3>Lien vers successeur:</h3>
+        <label>Successeur:</label><br>
+        <input type="text" id="st_successor" name="st_successor" value="Default Successor"><br>
+
+        <label>Prédécesseur:</label><br>
+        <input type="text" id="st_predecessor" name="st_predecessor" value="Default Predecessor"><br>
+
+        <label>Type de lien:</label><br>
+        <input type="text" id="st_link_kind" name="st_link_kind" value="Default Link Kind"><br>
+
+        <br>
+        <input type="submit" value="Soumettre">
+    </form>
+    <!-- Autres balises Task, workProduct, Role, toolDefinition, use -->
+    <!-- Vous pouvez ajouter ici des formulaires similaires pour d'autres balises -->
+
+    <!-- Include index.js script -->
+    <script src="scripts.js"></script>
+</body>
+</html>
