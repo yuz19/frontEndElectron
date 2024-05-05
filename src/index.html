@@ -3,56 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gloabl.css">
     <title>Formulaire XML</title>
 </head>
 <body>
     <h1>Formulaire XML</h1>
-    <h1>Role</h1>
-    <input type="text" id="st_roles" name="st_task_role" ><br>
-    <input type="button" id="submitRole" value="Add Role" >
+    <div class="extra">
+        <div class="role">
+            <h1>Role</h1>
+            <input type="text" id="st_roles" name="st_task_role" ><br>
+            <input type="button" id="submitRole" value="Add Role" >
+        </div>
 
-    <!-- Balise Task - Single Task (ST) -->
+        <div class="product">        
+            <h1>Product</h1>
+            <input type="text" id="st_Products" name="st_task_Product" ><br>
+            <label for="st_task_ProductComp">Composite ?</label>
+            <input type="checkbox" id="st_Products_composit" name="st_task_ProductComp" ><br>
+            <input type="button" id="submitProduct" value="Add Product" >
+        </div>
+
+        <div class="tool">
+            <h1>toolsDefinition</h1>
+            <input type="text" id="st_tool" name="st_task_tool" ><br>
+            <input type="button" id="submitTools" value="Add tool" >
+        </div>
+
+        <div class="uses">
+            <h1>Uses</h1>
+            <input type="text" id="st_uses" name="st_task_Use" ><br>
+            <select id="st_linked_use" name="st_linked_use">
+                <option value="">---</option>
+        
+                <!-- Options will be dynamically populated by JavaScript -->
+            </select><br>
+            
+            <input type="button" id="submitUses" value="Add Use" >
+        </div>
+
+    </div>
+ 
+
+  
+
     <h2>Balise Task - Single Task (ST)</h2>
-    <form id="xmlForm">
-        <label>Nom de la tâche:</label><br>
-        <input type="text" id="st_task_name" name="st_task_name" value="Default Task Name"><br>
 
-        <label>Type de tâche:</label><br>
-        <input type="text" id="st_task_type" name="st_task_type" value="Default Task Type"><br>
+<div class="task">
 
-        <!-- Paramètres de tâche -->
-        <h3>Paramètres de tâche:</h3>
-        <label>Direction (in/out/inout):</label><br>
-        <input type="text" id="st_task_direction" name="st_task_direction" value="Default Direction"><br>
+ <!-- Balise Task - Single Task (ST) -->
+        <div>
+            <label>Nom de la tâche:</label><br>
+            <input type="text" id="st_task_name" name="st_task_name" value="Default Task Name"><br>
+    
+            <label>Type de tâche:</label><br>
+            <input type="text" id="st_task_type" name="st_task_type" value="Default Task Type"><br>
+    
+            <!-- Paramètres de tâche -->
+            <h3>Paramètres de tâche:</h3>
+            
+            <label>Direction (in/out/inout):</label><br>
+            <input type="text" id="st_task_direction" name="st_task_direction" value="Default Direction"><br>
+            <label>Tâche liée:</label><br>
+            <input type="text" id="st_linked_task" name="st_linked_task" value="Default Linked Task"><br>
+    
+            <label>Produit lié:</label><br>
+            <select id="st_linked_product" name="st_linked_product">
+                <option value="">---</option>
+    
+                <!-- Options will be dynamically populated by JavaScript -->
+            </select><br>
+            
+            <!-- Exécutant de tâche -->
+        </div>
+        <div>
+ 
+            <h3>Exécutant de tâche:</h3>
+            <label>Rôle:</label><br>
+            <select id="st_role" name="st_role">
+                <option value="">---</option>
+                <!-- Options will be dynamically populated by JavaScript -->
+            </select><br>
 
-        <label>Tâche liée:</label><br>
-        <input type="text" id="st_linked_task" name="st_linked_task" value="Default Linked Task"><br>
+            <label>Tâche liée:</label><br>
+            <!-- <select id="st_linked_task_performer" name="st_linked_task_performer">
+              
+            </select><br> -->
+           
+            <input type="text" id="st_linked_task_performer" name="st_linked_task_performer" value="Default Linked Task"><br>
+            <!-- Lien vers successeur -->
+    
+            <h3>Lien vers successeur:</h3>
+            <label>Successeur:</label><br>
+            <input type="text" id="st_successor" name="st_successor" value="Default Successor"><br>
+    
+            <label>Prédécesseur:</label><br>
+            <input type="text" id="st_predecessor" name="st_predecessor" value="Default Predecessor"><br>
+    
+            <label>Type de lien:</label><br>
+            <input type="text" id="st_link_kind" name="st_link_kind" value="Default Link Kind"><br>
+    
+            <br>
+        </div>
+    
+      
+    </div>   
+    <input type="submit" id="addTask" value="addTask"><br>
 
-        <label>Produit lié:</label><br>
-        <input type="text" id="st_linked_product" name="st_linked_product" value="Default Linked Product"><br>
-
-        <!-- Exécutant de tâche -->
-        <h3>Exécutant de tâche:</h3>
-        <label>Rôle:</label><br>
-        <input type="text" id="st_role" name="st_role" value="Default Role"><br>
-
-        <label>Tâche liée:</label><br>
-        <input type="text" id="st_linked_task_performer" name="st_linked_task_performer" value="Default Linked Task Performer"><br>
-
-        <!-- Lien vers successeur -->
-        <h3>Lien vers successeur:</h3>
-        <label>Successeur:</label><br>
-        <input type="text" id="st_successor" name="st_successor" value="Default Successor"><br>
-
-        <label>Prédécesseur:</label><br>
-        <input type="text" id="st_predecessor" name="st_predecessor" value="Default Predecessor"><br>
-
-        <label>Type de lien:</label><br>
-        <input type="text" id="st_link_kind" name="st_link_kind" value="Default Link Kind"><br>
-
-        <br>
-        <input type="submit" value="Soumettre">
-    </form>
+        <input type="submit" id="xmlForm" value="create File">
+     
     <!-- Autres balises Task, workProduct, Role, toolDefinition, use -->
     <!-- Vous pouvez ajouter ici des formulaires similaires pour d'autres balises -->
 

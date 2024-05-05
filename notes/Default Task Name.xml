@@ -1,0 +1,99 @@
+
+            <?xml version="1.0" encoding="UTF-8"?>
+            <ECPMLModel>
+                <Tasks>
+                    
+            <Task name="Default Task Name" type="Default Task Type">
+                <taskParameters>
+                    <taskParameter>
+                        <direction>Default Direction</direction>
+                        <linkedTask ref="Default Linked Task"/> 
+                        <product ref="asa"/>
+                    </taskParameter>
+                </taskParameters>
+                <!-- TaskPerformer -->
+                <taskPerformer>
+                    <Role ref="DAS"/>
+                    <linkedTask ref="Default Linked Task"/>
+                </taskPerformer>
+                <!-- Link to Successor -->
+                <linkToSuccessor>
+                    <successor ref="Default Successor"/>
+                    <predecessor ref="Default Predecessor"/>
+                    <linkKind>Default Link Kind</linkKind>
+                </linkToSuccessor>
+            </Task>
+        
+            <Task name="Default Task Name" type="Default Task Type">
+                <taskParameters>
+                    <taskParameter>
+                        <direction>Default Direction</direction>
+                        <linkedTask ref="Default Linked Task"/> 
+                        <product ref="asa"/>
+                    </taskParameter>
+                </taskParameters>
+                <!-- TaskPerformer -->
+                <taskPerformer>
+                    <Role ref="DAS"/>
+                    <linkedTask ref="Default Linked Task"/>
+                </taskPerformer>
+                <!-- Link to Successor -->
+                <linkToSuccessor>
+                    <successor ref="Default Successor"/>
+                    <predecessor ref="Default Predecessor"/>
+                    <linkKind>Default Link Kind</linkKind>
+                </linkToSuccessor>
+            </Task>
+        
+            <Task name="Default Task Name" type="Default Task Type">
+                <taskParameters>
+                    <taskParameter>
+                        <direction>Default Direction</direction>
+                        <linkedTask ref="Default Linked Task"/> 
+                        <product ref="asa"/>
+                    </taskParameter>
+                </taskParameters>
+                <!-- TaskPerformer -->
+                <taskPerformer>
+                    <Role ref="DAS"/>
+                    <linkedTask ref="Default Linked Task"/>
+                </taskPerformer>
+                <!-- Link to Successor -->
+                <linkToSuccessor>
+                    <successor ref="Default Successor"/>
+                    <predecessor ref="Default Predecessor"/>
+                    <linkKind>Default Link Kind</linkKind>
+                </linkToSuccessor>
+            </Task>
+        
+                </Tasks>
+                <workProducts>
+                    
+            <workProduct name="asa" isComposite="false">
+                <nestedProducts>
+                    <nestedProduct>
+                        <product></product>
+                    </nestedProduct>
+                </nestedProducts>
+                <impactedProducts>
+                    <impactedProduct>
+                        <product></product>
+                    </impactedProduct>
+                </impactedProducts>
+            </workProduct>
+        
+                </workProducts>
+                <Roles>
+                    <Role name="DAS"/>
+                </Roles>
+                <toolsDefinition>
+                     <toolDefinition name="dad"/>
+                
+                </toolsDefinition>
+                <uses>
+                    <managedTask ref="sda"/>
+        <tool ref="dad"/>
+
+                </uses>
+            </ECPMLModel>
+        
