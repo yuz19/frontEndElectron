@@ -92,7 +92,7 @@ function createWindow() {
 
        
     });
-    ipcMain.handle('create-file',()=>{
+    ipcMain.handle('create-xml',()=>{
         const xmlData = `
         <?xml version="1.0" encoding="UTF-8"?>
         <ECPMLModel>
@@ -116,7 +116,7 @@ function createWindow() {
         </ECPMLModel>
     `;
     
-    const filePath = path.join(__dirname, 'notes', `${data.taskName}.xml`);
+    const filePath = path.join(__dirname, 'notes', `output.xml`);
     fs.writeFile(filePath, xmlData, (err) => {
         if (err) {
             console.error('Error writing file:', err);
